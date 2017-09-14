@@ -1,0 +1,25 @@
+<div class="container">
+    <a ng-click="back()" class="btn btn-info pull-right" href="javascript:">Back</a>
+    <br/>
+    <div ng-if="movies">
+        <h3 class="greenish-color">Top Movies</h3>
+        <input type="text" placeholder="Search Movies" class="form-control" data-ng-model="search">
+        <div class="smoke-background top-space">
+            <div class="row">
+                <div class="col-md-4" data-ng-repeat="movie in movies | orderBy:'Name':true | filter:search">
+                    <div class="actors">
+                        <a ng-href="#/movie/{{movie.Id}}">
+                            <img data-ng-src="{{movie.PosterPath}}" class="thumb-big">
+                        </a>
+                        <div>
+                            <a ng-href="#/movie/{{movie.Id}}">{{movie.Title | limitTo:18}}<span ng-if="movie.Title.length > 18">...</span></a>
+                            <br>
+                            <span data-ng-repeat="i in getCount(movie.Rating) track by $index" class="glyphicon left-align glyphicon-star"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-show="!movies.length">No Tag Found</div>
+</div>

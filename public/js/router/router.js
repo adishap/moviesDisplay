@@ -1,10 +1,10 @@
 moviesApp.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'tmpl/home.html'
+            templateUrl: 'tmpl/actorList.html'
         }).when('/actor/:id', {
-            templateUrl: 'tmpl/actor.html',
-            controller: 'actorDetailsController'
+            templateUrl: 'tmpl/movieList.html',
+            controller: 'movieListController'
         }).when('/movie/:id', {
             templateUrl: 'tmpl/movie.html',
             controller: 'movieDetailsController'

@@ -1,0 +1,20 @@
+<div class="container">
+    <h3 class="greenish-color">Top Actors</h3>
+    <input type="text" placeholder="Search Actors" class="form-control" data-ng-model="search">
+    <div class="smoke-background top-space">
+        <div class="row">
+            <div class="col-md-4" data-ng-repeat="actor in actors | orderBy:'Name':true | filter:search">
+                <div class="actors">
+                    <a ng-href="#/actor/{{actor.Id}}">
+                        <img data-ng-src="{{actor.ProfilePath}}" class="thumb-big">
+                    </a>
+                    <div>
+                        <a ng-href="#/actor/{{actor.Id}}">{{actor.Name}}</a>
+                        <br>
+                        <span data-ng-repeat="i in getCount(actor.Rating) track by $index" class="glyphicon left-align glyphicon-star"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
