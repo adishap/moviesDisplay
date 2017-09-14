@@ -93,3 +93,9 @@ body {
 .grey {
     color: #333;
 }
+
+.no-data{
+    margin-top: 10%;
+    font-size: 20px;
+    font-weight: bold;
+}
