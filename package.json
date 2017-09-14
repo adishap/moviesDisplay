@@ -1,5 +1,5 @@
 {
-  "name": "Movies Online",
+  "name": "moviesOnline",
   "version": "0.0.1",
   "description": "Book Movie tickets online",
   "main": "index.js",
