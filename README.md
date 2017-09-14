@@ -13,4 +13,4 @@ Steps to Install
 Steps to run the app
 ---------------------
 
-* In the terminal/prompt run `node index.js`
+* In the terminal/prompt run `node index.js <auth-token for cinemalytics>`
