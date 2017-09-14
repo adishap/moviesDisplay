@@ -10,8 +10,8 @@
                 <h3>{{movie.Title}} ({{movie.ReleaseDate}})</h3>
                 <p><span class="label label-primary">{{movie.Genre}}</span> <span class="label label-primary">{{movie.Region}}</span> <span class="label label-primary">{{movie.CensorRating}}</span></p>
                 <p><span data-ng-repeat="i in getCount(movie.Rating) track by $index" class="glyphicon orange g-2x glyphicon-star"></span><br>
+                <a href="{{movie.TrailerLink}}">Watch Trailer Now <span class="glyphicon glyphicon-menu-right"></span></a><br>
                 {{movie.Description}}</p>
-                <a ng-href="{{movie.TrailerLink}}">Watch Trailer Now <span class="glyphicon glyphicon-menu-right"></span></a>
             </div>
         </div>
     </div>
