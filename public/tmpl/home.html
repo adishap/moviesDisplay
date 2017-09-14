@@ -1,0 +1,19 @@
+<h2>Top Actors</h2>
+<input type="text" placeholder="Search Actors" class="form-control" data-ng-model="search">
+
+<div class="">
+    <div class="row actors-list">
+        <div class="col-md-4" data-ng-repeat="actor in actors | orderBy:'Name':true | filter:search">
+            <h2>{{actor.Name | uppercase}}</h2>
+            <p>
+                <img data-ng-src="{{actor.ProfilePath}}" class="thumb-big">
+            </p>
+            <p>{{actor.Rating}}</p>
+            <p>
+                <span class="label label-warning availability">Availability ({{actor.DateOfBirth}})</span>
+                <a ng-href="#/actor/{{actor.Id}} " class="btn btn-primary ">Review</a>
+                <a href="#" class="btn btn-success " role="button ">Book »</a>
+            </p>
+        </div>
+    </div>
+</div>
