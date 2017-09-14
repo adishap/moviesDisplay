@@ -49,21 +49,21 @@ body {
 
 .actors {
     margin: 5% 15%;
-    border: 1px solid #ccc;
 }
 
 .actors div {
     padding: 2% 5%;
+    border: 1px solid #ccc;
+}
+
+.actors .glyphicon,.orange {
+    color: #f05a29;
 }
 
 .actors a {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     color: #333;
-}
-
-.actors span {
-    color: #f05a29;
 }
 
 .thumb-big {
@@ -84,4 +84,12 @@ body {
 
 .top-space {
     margin-top: 32px;
+}
+
+.g-2x{
+    font-size: 20px;
+}
+
+.grey {
+    color: #333;
 }

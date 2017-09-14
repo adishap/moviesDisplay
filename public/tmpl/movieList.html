@@ -2,7 +2,7 @@
     <a ng-click="back()" class="btn btn-info pull-right" href="javascript:">Back</a>
     <br/>
     <div ng-if="movies">
-        <h3 class="greenish-color">Top Movies</h3>
+        <h3 class="greenish-color">Movies</h3>
         <input type="text" placeholder="Search Movies" class="form-control" data-ng-model="search">
         <div class="smoke-background top-space">
             <div class="row">
@@ -13,6 +13,8 @@
                         </a>
                         <div>
                             <a ng-href="#/movie/{{movie.Id}}">{{movie.Title | limitTo:18}}<span ng-if="movie.Title.length > 18">...</span></a>
+                            <br>
+                            {{movie.ReleaseDate}}
                             <br>
                             <span data-ng-repeat="i in getCount(movie.Rating) track by $index" class="glyphicon left-align glyphicon-star"></span>
                         </div>
